@@ -6,12 +6,14 @@ getMicroserviceByFolder .
 
 ROOT_WORKING_DIR=$(pwd)
 
-echo "$ROOT_WORKING_DIR"
+echo "Root folder: $ROOT_WORKING_DIR"
 
 for service in "${!MICROSERVICE_LIST[@]}";
 do
     buildService=$(echo "build_${serivce//./}" | tr "[:lower:]" "[:upper:]")
     
+    echo "Folder Service: $ROOT_WORKING_DIR/${MICROSERVICE_LIST[${serivce}]#.\/}"
+
     cd "$ROOT_WORKING_DIR/${MICROSERVICE_LIST[${serivce}]#.\/}"
     publishDir="obj/Docker/publish"
 

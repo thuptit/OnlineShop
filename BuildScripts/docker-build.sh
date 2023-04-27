@@ -32,8 +32,12 @@ do
     
     cd "$ROOT_WORKING_DIR/${service#.\/}"
 
-    echo "onlineshopapi$service"
-    # docker build -t "onlineshopapi${serivce#.\/}" . > /dev/null
+    str_not_slash=${service//\//}
+    str_not_dot=${str_not_slash//./}
+    current_datetime=$(date + "%Y%m%d%H%M%S")
+    image_name=$str_not_dot$current_datetime
+    
+    docker build -t "$image_name" . > /dev/null
 
     cd "$ROOT_WORKING_DIR"
 

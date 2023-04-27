@@ -1,6 +1,6 @@
 set -e
 
-declare -A MICROSERVICE_LIST
+declare -A MICROSERVICE_LIST #
 
 getMicroserviceByFolder() {
     for item in $1/*; do
@@ -8,8 +8,7 @@ getMicroserviceByFolder() {
         if [[ -d $item && $item == *".Api" ]]; then
             echo "root: $1"
             folderName=${1##*/}
-            MICROSERVICES+=("$folderName")
-            MICROSERVICE_LIST+=([$item]=$item)
+            MICROSERVICES+=("$folderName")&&MICROSERVICE_LIST+=([$item]="$item")
             echo "$item - $folderName"
         fi
 

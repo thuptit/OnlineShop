@@ -8,12 +8,12 @@ ROOT_WORKING_DIR=$(pwd)
 
 echo "Root folder: $ROOT_WORKING_DIR"
 
-for service in "${!MICROSERVICE_LIST[@]}";
+for service in "${MICROSERVICE_LIST[@]}";
 do
     echo "name serivce: $service"
     buildService=$(echo "build_${serivce//./}" | tr "[:lower:]" "[:upper:]")
     
-    echo "Folder Service: $ROOT_WORKING_DIR/${MICROSERVICE_LIST[${serivce}]#.\/}"
+    echo "Folder Service: $ROOT_WORKING_DIR/${service#.\/}"
 
     # cd "$ROOT_WORKING_DIR/${MICROSERVICE_LIST[${serivce}]#.\/}"
     # publishDir="obj/Docker/publish"

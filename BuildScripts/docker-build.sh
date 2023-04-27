@@ -29,11 +29,10 @@ done
 
 for service in "${MICROSERVICE_LIST[@]}";
 do
-    buildService=$(echo "build_${serivce//./}" | tr "[:lower:]" "[:upper:]")
     
     cd "$ROOT_WORKING_DIR/${service#.\/}"
 
-    echo "onlineshopapi${serivce#.\/}"
+    echo "onlineshopapi$service"
     # docker build -t "onlineshopapi${serivce#.\/}" . > /dev/null
 
     cd "$ROOT_WORKING_DIR"

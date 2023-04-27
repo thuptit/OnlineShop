@@ -3,7 +3,7 @@ declare -A MICROSERVICE_LIST
 getMicroserviceByFolder() {
     for item in $1/*; do
         
-        if [[ -d $item && $item == *".Api"]]; then
+        if [[ -d $item && $item == *".Api" ]]; then
             folderName=${1##*/}
             MICROSERVICES+=("$folderName") && MICROSERVICE_LIST+=([$folderName]=$item)
             echo "$item - $folderName"

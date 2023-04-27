@@ -9,7 +9,7 @@ getMicroserviceByFolder() {
             echo "root: $1"
             folderName=${1##*/}
             MICROSERVICES+=("$folderName")
-            MICROSERVICE_LIST+=([$folderName]=$item)
+            MICROSERVICE_LIST+=([$item]=$item)
             echo "$item - $folderName"
         fi
 

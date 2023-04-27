@@ -2,6 +2,8 @@ set -e
 
 source BuildScripts/variables.sh
 
+getMicroserviceByFolder .
+
 for service in "${MICROSERVICE_LIST[@]}";
 do
     str_not_slash=${service//\//}

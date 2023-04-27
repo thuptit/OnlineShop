@@ -20,3 +20,8 @@ jobs:
         run: | 
           chmod +rx ./BuildScripts/docker-build.sh && ./BuildScripts/docker-build.sh
         shell: bash
+
+      -name: Push Image
+        run: |
+          chmod +rx ./BuildScripts/docker-push.sh && ./BuildScripts/docker-push.sh
+        shell: bash

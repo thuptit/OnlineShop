@@ -34,8 +34,7 @@ do
 
     str_not_slash=${service//\//}
     str_not_dot=${str_not_slash//./}
-    current_datetime=$(date +"%Y%m%d%H%M%S")
-    image_name=${str_not_dot,,}$current_datetime
+    image_name=${str_not_dot,,}
     
     docker build -t "$image_name" . > /dev/null
 

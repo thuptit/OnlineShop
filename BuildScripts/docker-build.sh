@@ -18,7 +18,7 @@ do
     cd "$ROOT_WORKING_DIR/${service#.\/}"
     publishDir="obj/Docker/publish"
 
-    dotnet pushlish --no-restore --output "$publishDir" > /dev/null
+    dotnet publish --no-restore --output "$publishDir" > /dev/null
 
     cd "$ROOT_WORKING_DIR"
 

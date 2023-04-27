@@ -8,7 +8,7 @@ ROOT_WORKING_DIR=$(pwd)
 
 echo "Root folder: $ROOT_WORKING_DIR"
 
-for service in "${MICROSERVICE_LIST[@]}";
+for service in "${!MICROSERVICE_LIST[@]}";
 do
     echo "name serivce: $service"
     # buildService=$(echo "build_${serivce//./}" | tr "[:lower:]" "[:upper:]")

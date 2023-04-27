@@ -35,7 +35,7 @@ do
 
     name=$(echo "${serivce//\//.}" | tr '[:upper:]' '[:lower:]')
 
-    docker build -t "onlineshop${name}api" . > /dev/null
+    docker build -t "onlineshopapi${serivce#.\/}" . > /dev/null
 
     cd "$ROOT_WORKING_DIR"
 

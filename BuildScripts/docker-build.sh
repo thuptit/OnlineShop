@@ -15,25 +15,25 @@ do
     
     echo "Folder Service: $ROOT_WORKING_DIR/${service#.\/}"
 
-    # cd "$ROOT_WORKING_DIR/${MICROSERVICE_LIST[${serivce}]#.\/}"
-    # publishDir="obj/Docker/publish"
+    cd "$ROOT_WORKING_DIR/${service#.\/}"
+    publishDir="obj/Docker/publish"
 
-    # dotnet pushlish --no-restore --output "$publishDir" > /dev/null
+    dotnet pushlish --no-restore --output "$publishDir" > /dev/null
 
     cd "$ROOT_WORKING_DIR"
 
 done
 
-# for service in "${!MICROSERVICE_LIST[@]}";
-# do
-#     buildService=$(echo "build_${serivce//./}" | tr "[:lower:]" "[:upper:]")
+for service in "${MICROSERVICE_LIST[@]}";
+do
+    buildService=$(echo "build_${serivce//./}" | tr "[:lower:]" "[:upper:]")
     
-#     cd "$ROOT_WORKING_DIR/${MICROSERVICE_LIST[${serivce}]#.\/}"
+    cd "$ROOT_WORKING_DIR/${service#.\/}"
 
-#     name=$(echo "$serivce" | tr '[:upper:]' '[:lower:]')
+    name=$(echo "$serivce" | tr '[:upper:]' '[:lower:]')
 
-#     docker build -t "onlineshop.$name.api" . > /dev/null
+    docker build -t "onlineshop.$name.api" . > /dev/null
 
-#     cd "$ROOT_WORKING_DIR"
+    cd "$ROOT_WORKING_DIR"
 
-# done
+done

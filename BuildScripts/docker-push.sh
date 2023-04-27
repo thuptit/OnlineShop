@@ -2,7 +2,7 @@ set -e
 
 source BuildScripts/variables.sh
 
-docker login docker-registry.hopto.org -u Thutrang2709 --password-stdin Thutrang2709
+docker login docker-registry.hopto.org -u Thutrang2709 -p Thutrang2709
 
 for service in "${MICROSERVICE_LIST[@]}";
 do

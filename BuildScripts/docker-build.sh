@@ -21,7 +21,7 @@ do
 
     dotnet build
 
-    # dotnet publish --no-restore --output "$publishDir" > /dev/null
+    dotnet publish --no-restore --output "$publishDir" > /dev/null
 
     cd "$ROOT_WORKING_DIR"
 

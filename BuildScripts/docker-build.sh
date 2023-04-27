@@ -16,9 +16,12 @@ do
     echo "Folder Service: $ROOT_WORKING_DIR/${service#.\/}"
 
     cd "$ROOT_WORKING_DIR/${service#.\/}"
+
     publishDir="obj/Docker/publish"
 
-    dotnet publish --no-restore --output "$publishDir" > /dev/null
+    dotnet build
+
+    # dotnet publish --no-restore --output "$publishDir" > /dev/null
 
     cd "$ROOT_WORKING_DIR"
 

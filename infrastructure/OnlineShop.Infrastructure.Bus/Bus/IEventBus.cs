@@ -1,12 +1,12 @@
-﻿using OnlineShop.Shared.Bus.Commands;
-using OnlineShop.Shared.Bus.Events;
+﻿using OnlineShop.Infrastructure.Bus.Commands;
+using OnlineShop.Infrastructure.Bus.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineShop.Shared.Bus.Bus
+namespace OnlineShop.Infrastructure.Bus.Bus
 {
     public interface IEventBus
     {

@@ -1,4 +1,4 @@
-﻿using OnlineShop.Shared.Bus.Events;
+﻿using OnlineShop.Infrastructure.Bus.Events;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineShop.Shared.Bus.Commands
+namespace OnlineShop.Infrastructure.Bus.Commands
 {
     public abstract class Command : Message
     {

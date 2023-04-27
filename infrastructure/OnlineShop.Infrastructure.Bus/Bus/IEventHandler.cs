@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineShop.Shared.Bus.Bus
+namespace OnlineShop.Infrastructure.Bus.Bus
 {
     public interface IEventHandler<in TEvent> : IEventHandler
     {

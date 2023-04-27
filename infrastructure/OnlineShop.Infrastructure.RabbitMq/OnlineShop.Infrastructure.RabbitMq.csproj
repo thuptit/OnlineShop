@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OnlineShop.Shared.Bus\OnlineShop.Shared.Bus.csproj" />
-    <ProjectReference Include="..\OnlineShop.Shared.Common\OnlineShop.Shared.Common.csproj" />
+    <ProjectReference Include="..\..\shared\OnlineShop.Shared.Common\OnlineShop.Shared.Common.csproj" />
+    <ProjectReference Include="..\OnlineShop.Infrastructure.Bus\OnlineShop.Infrastructure.Bus.csproj" />
   </ItemGroup>
 
 </Project>

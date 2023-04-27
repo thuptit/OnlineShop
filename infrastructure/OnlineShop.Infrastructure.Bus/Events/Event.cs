@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineShop.Shared.Bus.Events
+namespace OnlineShop.Infrastructure.Bus.Events
 {
     public abstract class Event
     {

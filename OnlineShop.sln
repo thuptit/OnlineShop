@@ -17,21 +17,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "payment", "payment", "{CB0C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{B82313A5-ADC2-4735-80E7-F8EB65A6BFB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Cart.Api", "OnlineShop.Cart.Api\OnlineShop.Cart.Api.csproj", "{403B7320-F998-4ECB-8C00-531390675BFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShop.Cart.Api", "OnlineShop.Cart.Api\OnlineShop.Cart.Api.csproj", "{403B7320-F998-4ECB-8C00-531390675BFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Category.Api", "OnlineShop.Category.Api\OnlineShop.Category.Api.csproj", "{C82AE735-88FC-48AA-B258-7B38B9CC1481}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShop.Category.Api", "OnlineShop.Category.Api\OnlineShop.Category.Api.csproj", "{C82AE735-88FC-48AA-B258-7B38B9CC1481}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Order.Api", "OnlineShop.Order.Api\OnlineShop.Order.Api.csproj", "{91D87F8D-F296-4E88-B6F1-66D6440EAB60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShop.Order.Api", "OnlineShop.Order.Api\OnlineShop.Order.Api.csproj", "{91D87F8D-F296-4E88-B6F1-66D6440EAB60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Payment.Api", "OnlineShop.Payment.Api\OnlineShop.Payment.Api.csproj", "{863EC427-3B27-4E4F-900F-9AFECDC0C1D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShop.Payment.Api", "OnlineShop.Payment.Api\OnlineShop.Payment.Api.csproj", "{863EC427-3B27-4E4F-900F-9AFECDC0C1D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Product.Api", "OnlineShop.Product.Api\OnlineShop.Product.Api.csproj", "{96DDEDB1-0D79-47CD-B416-77DCB0D87774}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShop.Product.Api", "OnlineShop.Product.Api\OnlineShop.Product.Api.csproj", "{96DDEDB1-0D79-47CD-B416-77DCB0D87774}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Shared.RabbitMq", "shared\OnlineShop.Shared.RabbitMq\OnlineShop.Shared.RabbitMq.csproj", "{AB46675E-55B7-4847-9283-430DFDE63CD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShop.Infrastructure.RabbitMq", "infrastructure\OnlineShop.Infrastructure.RabbitMq\OnlineShop.Infrastructure.RabbitMq.csproj", "{AB46675E-55B7-4847-9283-430DFDE63CD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Shared.Bus", "shared\OnlineShop.Shared.Bus\OnlineShop.Shared.Bus.csproj", "{7A9626C1-2EFE-4FFF-97D4-BEFCCB5AD4BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShop.Infrastructure.Bus", "infrastructure\OnlineShop.Infrastructure.Bus\OnlineShop.Infrastructure.Bus.csproj", "{7A9626C1-2EFE-4FFF-97D4-BEFCCB5AD4BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Shared.Common", "shared\OnlineShop.Shared.Common\OnlineShop.Shared.Common.csproj", "{190B2693-0371-4AA3-90DF-D9771376858E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShop.Shared.Common", "shared\OnlineShop.Shared.Common\OnlineShop.Shared.Common.csproj", "{190B2693-0371-4AA3-90DF-D9771376858E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{D319E2F5-8671-4B9A-A24C-F48E8DEB9736}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Infrastructure.EntityFrameworkCore", "infrastructure\OnlineShop.Infrastructure.EntityFrameworkCore\OnlineShop.Infrastructure.EntityFrameworkCore.csproj", "{FE9F03FB-AA9D-4E88-BB3D-E52122ED8DDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +75,10 @@ Global
 		{190B2693-0371-4AA3-90DF-D9771376858E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{190B2693-0371-4AA3-90DF-D9771376858E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{190B2693-0371-4AA3-90DF-D9771376858E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE9F03FB-AA9D-4E88-BB3D-E52122ED8DDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE9F03FB-AA9D-4E88-BB3D-E52122ED8DDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE9F03FB-AA9D-4E88-BB3D-E52122ED8DDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE9F03FB-AA9D-4E88-BB3D-E52122ED8DDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,9 +89,10 @@ Global
 		{91D87F8D-F296-4E88-B6F1-66D6440EAB60} = {CF289041-8DD0-4773-A36F-E66671C97DE0}
 		{863EC427-3B27-4E4F-900F-9AFECDC0C1D7} = {CB0CB3A6-9081-498E-A8DC-FD73E192830D}
 		{96DDEDB1-0D79-47CD-B416-77DCB0D87774} = {E15EF418-4C54-4CC6-86F0-B549644930E9}
-		{AB46675E-55B7-4847-9283-430DFDE63CD9} = {B82313A5-ADC2-4735-80E7-F8EB65A6BFB8}
-		{7A9626C1-2EFE-4FFF-97D4-BEFCCB5AD4BD} = {B82313A5-ADC2-4735-80E7-F8EB65A6BFB8}
+		{AB46675E-55B7-4847-9283-430DFDE63CD9} = {D319E2F5-8671-4B9A-A24C-F48E8DEB9736}
+		{7A9626C1-2EFE-4FFF-97D4-BEFCCB5AD4BD} = {D319E2F5-8671-4B9A-A24C-F48E8DEB9736}
 		{190B2693-0371-4AA3-90DF-D9771376858E} = {B82313A5-ADC2-4735-80E7-F8EB65A6BFB8}
+		{FE9F03FB-AA9D-4E88-BB3D-E52122ED8DDB} = {D319E2F5-8671-4B9A-A24C-F48E8DEB9736}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {352CC363-923A-4858-B917-28C06BD7281C}

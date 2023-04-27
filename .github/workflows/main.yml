@@ -1,0 +1,22 @@
+name: build
+
+on:
+  push:
+  pull_request:
+    branches: [ main ]
+    paths:
+    - '**.cs'
+    - '**.csproj'
+
+env:
+  DOTNET_VERSION: '6.0' # The .NET SDK version to use
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build project 
+        run: | 
+          chmod +rx ./BuildScripts/docker-build.sh && ./BuildScripts/docker-build.sh
+        shell: bash

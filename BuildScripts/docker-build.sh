@@ -33,7 +33,7 @@ do
     
     cd "$ROOT_WORKING_DIR/${service#.\/}"
 
-    name=$(echo "$serivce" | tr '[:upper:]' '[:lower:]')
+    name=$(echo "${serivce//\//.}" | tr '[:upper:]' '[:lower:]')
 
     docker build -t "onlineshop.$name.api" . > /dev/null
 

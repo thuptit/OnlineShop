@@ -21,16 +21,16 @@ do
 
 done
 
-for service in "${!MICROSERVICE_LIST[@]}";
-do
-    buildService=$(echo "build_${serivce//./}" | tr "[:lower:]" "[:upper:]")
+# for service in "${!MICROSERVICE_LIST[@]}";
+# do
+#     buildService=$(echo "build_${serivce//./}" | tr "[:lower:]" "[:upper:]")
     
-    cd "$ROOT_WORKING_DIR/${MICROSERVICE_LIST[${serivce}]#.\/}"
+#     cd "$ROOT_WORKING_DIR/${MICROSERVICE_LIST[${serivce}]#.\/}"
 
-    name=$(echo "$serivce" | tr '[:upper:]' '[:lower:]')
+#     name=$(echo "$serivce" | tr '[:upper:]' '[:lower:]')
 
-    docker build -t "onlineshop.$name.api" . > /dev/null
+#     docker build -t "onlineshop.$name.api" . > /dev/null
 
-    cd "$ROOT_WORKING_DIR"
+#     cd "$ROOT_WORKING_DIR"
 
-done
+# done

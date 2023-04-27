@@ -6,9 +6,10 @@ getMicroserviceByFolder() {
     for item in $1/*; do
         
         if [[ -d $item && $item == *".Api" ]]; then
+            echo "root: $1"
             folderName=${1##*/}
             MICROSERVICES+=("$folderName")
-            MICROSERVICE_LIST+=($item)
+            MICROSERVICE_LIST+=([$folderName]=$item)
             echo "$item - $folderName"
         fi
 

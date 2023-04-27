@@ -33,9 +33,8 @@ do
     
     cd "$ROOT_WORKING_DIR/${service#.\/}"
 
-    name=$(echo "${serivce//\//.}" | tr '[:upper:]' '[:lower:]')
-
-    docker build -t "onlineshopapi${serivce#.\/}" . > /dev/null
+    echo "onlineshopapi${serivce#.\/}"
+    # docker build -t "onlineshopapi${serivce#.\/}" . > /dev/null
 
     cd "$ROOT_WORKING_DIR"
 

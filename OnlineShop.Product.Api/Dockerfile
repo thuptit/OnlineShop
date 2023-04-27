@@ -3,5 +3,5 @@
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 
 ARG source
 WORKDIR /app
-COPY ${source:-obj/Docker/publist} .
+COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", "OnlineShop.Product.Api.dll"]

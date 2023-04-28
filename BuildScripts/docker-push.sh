@@ -4,8 +4,6 @@ source BuildScripts/variables.sh
 
 getMicroserviceByFolder .
 
-docker login -u thudevdockerv1 -p 14102000Aa@ 
-
 for service in "${MICROSERVICE_LIST[@]}";
 do
     str_not_slash=${service//\//}

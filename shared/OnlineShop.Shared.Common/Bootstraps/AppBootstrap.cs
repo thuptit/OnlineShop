@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using Serilog.Exceptions;
@@ -12,10 +15,14 @@ namespace OnlineShop.Shared.Common.Bootstraps
 {
     public static class AppBootstrap
     {
-        public static void AddFeaturesApp(WebApplicationBuilder builder)
+        public static void AddFeaturesApp(WebApplicationBuilder builder, string serviceName = "")
         {
             var appBootstrapBuilder = new AppBootstrapBuilder();
-
+            builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
+                .ConfigureContainer<ContainerBuilder>(options =>
+                {
+                    appBootstrapBuilder.RegisterAllModule(options, serviceName);
+                });
             var config = appBootstrapBuilder.GetConfiguration();
             appBootstrapBuilder.CreateLogger(config.Item1, config.Item2);
             builder.Host.UseSerilog();
@@ -70,5 +77,14 @@ namespace OnlineShop.Shared.Common.Bootstraps
             return (environment, configuration);
         }
 
+        public void RegisterAllModule(ContainerBuilder container, string serviceName)
+        {
+            string searchPattern = $"OnlineShop.{serviceName}.*.dll";
+            var path = AppDomain.CurrentDomain.BaseDirectory;
+            foreach (var assembly in Directory.GetFiles(path, searchPattern).Select(Assembly.LoadFrom))
+            {
+                container.RegisterAssemblyModules(assembly);
+            }
+        }
     }
 }

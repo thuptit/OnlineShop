@@ -1,24 +1,14 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using OnlineShop.Shared.Common.Bootstraps;
 
 var builder = WebApplication.CreateBuilder(args);
+AppBootstrap.AddFeaturesApp(builder);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-    .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme,x =>
-    {
-        x.Authority = "https://localhost:5001"; 
-        x.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateAudience = false
-        };
-    });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

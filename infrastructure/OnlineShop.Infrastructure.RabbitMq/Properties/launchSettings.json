@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "OnlineShop.Infrastructure.RabbitMq": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:50731;http://localhost:50735"
+    }
+  }
+}
